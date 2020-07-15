@@ -4,9 +4,10 @@ public class Edge<T> {
 
     private T source;
     private T destination;
-    private int weight;
+    private float weight;
+    private float intermediateWeight = -1;
 
-    public Edge(T source, T destination, int weight) {
+    public Edge(T source, T destination, float weight) {
         this.source = source;
         this.destination = destination;
         this.weight = weight;
@@ -28,12 +29,20 @@ public class Edge<T> {
         this.destination = destination;
     }
 
-    public int getWeight() {
+    public float getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(float weight) {
         this.weight = weight;
+    }
+
+    public float getIntermediateWeight() {
+        return intermediateWeight;
+    }
+
+    public void setIntermediateWeight(float intermediateWeight) {
+        this.intermediateWeight = intermediateWeight;
     }
 
     @Override

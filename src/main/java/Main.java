@@ -11,7 +11,7 @@ public class Main {
         graph.addEdge(3, 5, 20);
         graph.addEdge(4, 5, 10);
         DijkstraSearch<Integer> search = new DijkstraSearch<>(graph);
-        search.findLowestCost(4);
+        System.out.println("Lowest cost = " + search.findLowestCost(0, 4));
         System.out.println(graph);
     }
 }

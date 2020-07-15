@@ -8,7 +8,7 @@ public class Graph<T> {
         graphMap.put(value, new LinkedList<>());
     }
 
-    public void addEdge(T source, T destination, int weight) {
+    public void addEdge(T source, T destination, float weight) {
         Edge<T> edge = new Edge<>(source, destination, weight);
         if (!graphMap.containsKey(source)) {
             addVertex(source);
